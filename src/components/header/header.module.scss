@@ -1,0 +1,94 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 16px;
+
+  @include respond-to(sm) {
+    padding: 20px;
+  }
+  @include respond-to(lg) {
+    padding: 24px;
+  }
+  @include respond-to(xl) {
+    padding: 48px;
+  }
+  @include respond-to(2xl) {
+    padding: 64px;
+  }
+  @include respond-to(3xl) {
+    padding: 80px;
+  }
+
+  &__logo {
+    width: 101px;
+    height: 27px;
+  }
+
+  &__menu-btn {
+    &__icon {
+      width: 30px;
+    }
+  }
+}
+
+.multi-language {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  column-gap: 9px;
+  right: 16px;
+  top: calc(100% - 16px);
+
+  @include respond-to(sm) {
+    right: 20px;
+    top: calc(100% - 20px);
+  }
+  @include respond-to(lg) {
+    right: 24px;
+    top: calc(100% - 24px);
+  }
+  @include respond-to(xl) {
+    right: 48px;
+    top: calc(100% - 48px);
+  }
+  @include respond-to(2xl) {
+    right: 64px;
+    top: calc(100% - 64px);
+  }
+  @include respond-to(3xl) {
+    right: 80px;
+    top: calc(100% - 80px);
+  }
+
+  &__item {
+    color: variables.$black-222;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+    @include respond-to(sm) {
+      font-size: 16px;
+    }
+    @include respond-to(xl) {
+      font-size: 17.5px;
+    }
+
+    &.active {
+      color: variables.$blue-42c;
+      font-weight: 700;
+    }
+  }
+}

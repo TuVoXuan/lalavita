@@ -11,6 +11,15 @@ h6,
 p {
   font-size: inherit;
   font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
 }
 
 * {
