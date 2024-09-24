@@ -1,0 +1,138 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.wrapper {
+  padding: 16px;
+  padding-top: 59px;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  background-color: variables.$yellow-fed;
+
+  @include respond-to(sm) {
+    padding: 20px;
+    padding-top: 67px;
+  }
+  @include respond-to(lg) {
+    padding: 24px;
+    padding-top: 75px;
+  }
+  @include respond-to(xl) {
+    padding: 48px;
+    padding-top: 123px;
+  }
+  @include respond-to(2xl) {
+    padding: 64px;
+    padding-top: 155px;
+  }
+  @include respond-to(3xl) {
+    padding: 80px;
+    padding-top: 187px;
+  }
+
+  &__text-wrap {
+    text-align: center;
+
+    @include respond-to(sm) {
+      padding-top: 20px;
+    }
+    @include respond-to(lg) {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    @include respond-to(xl) {
+      padding-top: 0;
+    }
+    @include respond-to(3xl) {
+      max-width: 840px;
+    }
+
+    &__text-highlight {
+      margin-bottom: 12px;
+
+      @include respond-to(sm) {
+        margin-bottom: 24px;
+      }
+      @include respond-to(lg) {
+        margin-bottom: 28px;
+      }
+      @include respond-to(2xl) {
+        margin-bottom: 31px;
+      }
+    }
+    &__title {
+      font-size: 28px;
+      font-family: "Pretendard", sans-serif;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      color: variables.$black-222;
+      font-weight: 600;
+
+      @include respond-to(sm) {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+      @include respond-to(lg) {
+        font-size: 36px;
+        margin-bottom: 24px;
+      }
+      @include respond-to(2xl) {
+        font-size: 40px;
+        margin-bottom: 34px;
+      }
+
+      &__quote {
+        font-family: "Noto Sans KR", system-ui;
+      }
+      &__bold {
+        font-weight: 700;
+      }
+    }
+    &__desc {
+      font-size: 14px;
+      line-height: 1.11;
+      font-family: "Pretendard", sans-serif;
+      color: variables.$black-222;
+
+      @include respond-to(sm) {
+        font-size: 16px;
+      }
+      @include respond-to(lg) {
+        font-size: 17.5px;
+      }
+    }
+  }
+
+  &__card-wrap {
+    margin-top: 50px;
+
+    @include respond-to(lg) {
+      margin-top: 70px;
+    }
+
+    @include respond-to(xl) {
+      margin-top: 32px;
+    }
+    @include respond-to(2xl) {
+      margin-top: 100px;
+    }
+
+    &__swiper {
+      @include respond-to(sm) {
+        display: none;
+      }
+    }
+    &__list {
+      display: none;
+      @include respond-to(sm) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      @include respond-to(lg) {
+        gap: 30px;
+      }
+    }
+  }
+}

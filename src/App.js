@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Header from "./components/header/header";
 import Introduction from "./views/Introduction/Introduction";
+import QuoteWithAnalysis from "./views/QuoteWithAnalysis/QuoteWithAnalysis";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         modules={[Pagination, Mousewheel]}
       >
         <SwiperSlide><Introduction/></SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide><QuoteWithAnalysis/></SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>
         <SwiperSlide>Slide 5</SwiperSlide>

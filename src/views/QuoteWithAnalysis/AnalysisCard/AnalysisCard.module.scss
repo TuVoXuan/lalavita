@@ -1,0 +1,112 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.wrapper {
+  padding: 24px 20px;
+  border-radius: 20px;
+
+  @include respond-to(sm) {
+    padding: 26px 22px;
+    width: 342px;
+    box-sizing: border-box;
+  }
+  @include respond-to(lg) {
+    padding: 28px 24px;
+    width: 400px;
+  }
+  @include respond-to(xl) {
+    width: 360px;
+  }
+  @include respond-to(2xl) {
+    padding: 32px 28px;
+    width: 406px;
+  }
+  @include respond-to(3xl) {
+    padding: 43px 40px;
+    width: 467px;
+  }
+
+  &.white {
+    background-color: variables.$white-fff;
+  }
+  &.blue {
+    background-color: variables.$blue-42c;
+  }
+
+  &__icon {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 12px;
+
+    @include respond-to(sm) {
+      height: 40px;
+      width: 40px;
+      margin-bottom: 16px;
+    }
+    @include respond-to(lg) {
+      height: 44px;
+      width: 44px;
+      margin-bottom: 20px;
+    }
+    @include respond-to(2xl) {
+      height: 52px;
+      width: 52px;
+      margin-bottom: 26px;
+    }
+    @include respond-to(3xl) {
+      height: 61px;
+      width: 61px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-family: "Pretendard", sans-serif;
+    margin-bottom: 18px;
+    line-height: 1.25;
+    font-weight: 600;
+    color: variables.$black-222;
+    max-width: 200px;
+
+    @include respond-to(sm) {
+      font-size: 26px;
+      margin-bottom: 24px;
+    }
+    @include respond-to(lg) {
+      font-size: 28px;
+      margin-bottom: 28px;
+      max-width: 230px;
+    }
+    @include respond-to(2xl) {
+      font-size: 32px;
+      margin-bottom: 36px;
+      max-width: 305px;
+    }
+  }
+  &__desc {
+    font-size: 14px;
+    font-family: "Pretendard", sans-serif;
+    line-height: 1.67;
+
+    @include respond-to(sm) {
+      font-size: 16px;
+    }
+    @include respond-to(lg) {
+      font-size: 18px;
+    }
+
+    &.white {
+      color: variables.$gray-999;
+    }
+
+    &.blue {
+      color: variables.$black-222;
+    }
+  }
+}
