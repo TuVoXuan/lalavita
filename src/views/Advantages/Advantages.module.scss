@@ -1,0 +1,219 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+
+  @include respond-to(xl) {
+    flex-direction: row;
+  }
+
+  &__advantage-one {
+    height: 50%;
+    padding: 16px;
+    padding-top: 59px;
+    overflow: hidden;
+    background-color: variables.$yellow-fed;
+    box-sizing: border-box;
+
+    @include respond-to(sm) {
+      padding: 20px;
+      padding-top: 67px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: center;
+    }
+    @include respond-to(lg) {
+      padding: 24px;
+      padding-top: 75px;
+    }
+    @include respond-to(xl) {
+      padding: 48px;
+      padding-top: 123px;
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      grid-template-columns: unset;
+    }
+    @include respond-to(2xl) {
+      padding: 64px;
+      padding-top: 155px;
+    }
+    @include respond-to(3xl) {
+      padding: 80px;
+      padding-top: 187px;
+      padding-left: 295px;
+      padding-right: 240px;
+    }
+  }
+  &__advantage-two {
+    height: 50%;
+    background-color: variables.$white-fff;
+    padding: 16px;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @include respond-to(sm) {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: center;
+    }
+    @include respond-to(lg) {
+      padding: 24px;
+    }
+    @include respond-to(xl) {
+      padding: 48px;
+      padding-top: 123px;
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      grid-template-columns: unset;
+    }
+    @include respond-to(2xl) {
+      padding: 64px;
+      padding-top: 155px;
+    }
+    @include respond-to(3xl) {
+      padding: 80px;
+      padding-top: 187px;
+      padding-right: 295px;
+      padding-left: 240px;
+    }
+  }
+}
+
+.text-wrap {
+  text-align: center;
+}
+
+.text-highlight {
+  margin-bottom: 12px;
+
+  @include respond-to(sm) {
+    margin-bottom: 24px;
+  }
+  @include respond-to(lg) {
+    margin-bottom: 28px;
+  }
+  @include respond-to(2xl) {
+    margin-bottom: 31px;
+  }
+}
+
+.text-title {
+  font-size: 28px;
+  font-family: "Pretendard", sans-serif;
+  line-height: 1.17;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  color: variables.$black-222;
+  font-weight: 600;
+
+  &__advan-one {
+    max-width: 300px;
+    @include respond-to(2xl) {
+      max-width: 400px;
+    }
+  }
+  &__advan-two {
+    max-width: 180px;
+    @include respond-to(2xl) {
+      max-width: 260px;
+    }
+  }
+  @include respond-to(sm) {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  @include respond-to(lg) {
+    font-size: 36px;
+    margin-bottom: 26px;
+  }
+  @include respond-to(2xl) {
+    font-size: 40.5px;
+    margin-bottom: 38px;
+  }
+}
+
+.text-desc {
+  font-size: 14px;
+  line-height: 1.67;
+  font-family: "Pretendard", sans-serif;
+  color: variables.$black-222;
+  margin: 0 auto;
+
+  &__advan-one {
+    @include respond-to(sm) {
+      max-width: 320px;
+    }
+  }
+  &__advan-two {
+    @include respond-to(sm) {
+      max-width: 386px;
+    }
+    @include respond-to(lg) {
+      max-width: 420px;
+    }
+  }
+
+  @include respond-to(sm) {
+    font-size: 16px;
+  }
+  @include respond-to(lg) {
+    font-size: 18px;
+  }
+}
+
+.img-advantage {
+  margin-top: 40px;
+  width: 46%;
+  margin: 0 auto;
+
+  @include respond-to(sm) {
+    width: 320px;
+  }
+  @include respond-to(lg) {
+    width: 400px;
+  }
+  @include respond-to(2xl) {
+    width: 425px;
+  }
+  @include respond-to(3xl) {
+    width: 451px;
+  }
+
+  &__advan_one {
+    @include respond-to(xl) {
+      margin-top: 41px;
+    }
+    @include respond-to(2xl) {
+      margin-top: 54px;
+    }
+    @include respond-to(3xl) {
+      margin-top: 82px;
+    }
+  }
+  &__advan_two {
+    @include respond-to(xl) {
+      margin-top: 23.5px;
+    }
+    @include respond-to(2xl) {
+      margin-top: 31px;
+    }
+    @include respond-to(3xl) {
+      margin-top: 47px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

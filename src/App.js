@@ -7,6 +7,7 @@ import Header from "./components/header/header";
 import Introduction from "./views/Introduction/Introduction";
 import QuoteWithAnalysis from "./views/QuoteWithAnalysis/QuoteWithAnalysis";
 import Material from "./views/Material/Material";
+import Advantages from "./views/Advantages/Advantages";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <SwiperSlide><Introduction/></SwiperSlide>
         <SwiperSlide><QuoteWithAnalysis/></SwiperSlide>
         <SwiperSlide><Material/></SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide><Advantages/></SwiperSlide>
         <SwiperSlide>Slide 5</SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>
         <SwiperSlide>Slide 7</SwiperSlide>
