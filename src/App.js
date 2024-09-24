@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Mousewheel } from "swiper/modules";
 import styles from "./App.module.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import Header from "./components/header/header";
+import Introduction from "./views/Introduction/Introduction";
 
 function App() {
   return (
@@ -14,10 +15,10 @@ function App() {
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
-        className="mySwiper"
+        mousewheel={true}
+        modules={[Pagination, Mousewheel]}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide><Introduction/></SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>

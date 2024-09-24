@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 export default function Header() {
   return (
-    <div className={styles["container"]}>
+    <div id="header" className={styles["container"]}>
       <div className={styles["header"]}>
         <div className={styles["header__logo"]}>
           <img

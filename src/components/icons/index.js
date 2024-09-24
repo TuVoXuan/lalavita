@@ -1,7 +1,9 @@
+import ArrowDown from "./arrow-down";
 import Menu from "./menu";
 
 const Icons = {
-    Menu
+    Menu,
+    ArrowDown
 }
 
 export default Icons;

@@ -38,9 +38,27 @@
   height: 100dvh;
   width: 100%;
   position: relative;
+  z-index: 1;
 
   @include respond-to(3xl) {
     max-width: 1920px;
     margin: 0 auto;
+  }
+}
+
+:global {
+  .text-highlight {
+    color: variables.$blue-42c;
+    font-family: "Pretendard", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.62;
+
+    @include respond-to(sm) {
+      font-size: 16px;
+    }
+    @include respond-to(lg) {
+      font-size: 18.5px;
+    }
   }
 }
