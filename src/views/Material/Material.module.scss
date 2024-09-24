@@ -1,0 +1,142 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.wrapper {
+  padding: 16px;
+  padding-top: 59px;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  background-color: variables.$white-fff;
+
+  @include respond-to(sm) {
+    padding: 20px;
+    padding-top: 67px;
+  }
+  @include respond-to(lg) {
+    padding: 24px;
+    padding-top: 75px;
+  }
+  @include respond-to(xl) {
+    padding: 48px;
+    padding-top: 123px;
+    display: flex;
+    align-items: center;
+  }
+  @include respond-to(2xl) {
+    padding: 64px;
+    padding-top: 155px;
+  }
+  @include respond-to(3xl) {
+    padding: 80px;
+    padding-top: 187px;
+  }
+
+  &__text-wrap {
+    @include respond-to(sm) {
+      max-width: 80%;
+    }
+
+    @include respond-to(lg) {
+      padding-top: 100px;
+      max-width: 60%;
+    }
+    @include respond-to(xl) {
+      padding-top: 0;
+      max-width: 460px;
+      margin-left: 40px;
+      margin-right: 75px;
+    }
+    @include respond-to(2xl) {
+      padding-top: 0;
+      max-width: 532px;
+      margin-left: 60px;
+      margin-right: 90px;
+    }
+    @include respond-to(3xl) {
+      padding-top: 0;
+      max-width: 554px;
+      margin-left: 150px;
+      margin-right: 115px;
+    }
+
+    &__text-highlight {
+      margin-bottom: 12px;
+      @include respond-to(sm) {
+        margin-bottom: 16px;
+      }
+      @include respond-to(lg) {
+        margin-bottom: 20px;
+      }
+      @include respond-to(xl) {
+        margin-bottom: 24px;
+      }
+      @include respond-to(2xl) {
+        margin-bottom: 31px;
+      }
+    }
+    &__title {
+      font-size: 28px;
+      font-family: "Pretendard", sans-serif;
+      line-height: 1.21;
+      color: variables.$black-222;
+      font-weight: 600;
+      white-space: nowrap;
+
+      @include respond-to(sm) {
+        font-size: 32px;
+      }
+      @include respond-to(lg) {
+        font-size: 36px;
+      }
+      @include respond-to(2xl) {
+        font-size: 40px;
+      }
+    }
+    &__desc {
+      font-size: 14px;
+      line-height: 1.67;
+      font-family: "Pretendard", sans-serif;
+      color: variables.$black-222;
+      margin-top: 20px;
+
+      @include respond-to(sm) {
+        font-size: 16px;
+        margin-top: 24px;
+      }
+      @include respond-to(lg) {
+        font-size: 18px;
+        margin-top: 28px;
+      }
+      @include respond-to(xl) {
+        margin-top: 32px;
+      }
+      @include respond-to(2xl) {
+        margin-top: 46px;
+      }
+    }
+  }
+
+  &__illust-img {
+    width: 80%;
+    margin: 0 auto;
+
+    @include respond-to(lg) {
+      width: 70%;
+    }
+    @include respond-to(xl) {
+      width: 50%;
+    }
+
+    @include respond-to(3xl) {
+      width: 700px;
+      margin-left: unset;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
