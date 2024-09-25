@@ -1,0 +1,185 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.wrapper {
+  position: relative;
+  padding: 16px;
+  padding-top: 59px;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  background-color: variables.$white-fff;
+
+  @include respond-to(sm) {
+    padding: 20px;
+    padding-top: 67px;
+  }
+  @include respond-to(lg) {
+    padding: 24px;
+    padding-top: 75px;
+  }
+  @include respond-to(xl) {
+    padding: 48px;
+    padding-top: 123px;
+  }
+  @include respond-to(2xl) {
+    padding: 64px;
+    padding-top: 155px;
+  }
+  @include respond-to(3xl) {
+    padding: 80px;
+    padding-top: 187px;
+  }
+
+  &__text-wrap {
+    @include respond-to(lg) {
+      margin-top: 60px;
+    }
+    @include respond-to(xl) {
+      margin-top: 26px;
+      margin-left: 101px;
+    }
+    @include respond-to(3xl) {
+      margin-top: 12px;
+      margin-left: 148px;
+    }
+
+    &__text-highlight {
+      margin-bottom: 12px;
+      @include respond-to(sm) {
+        margin-bottom: 16px;
+      }
+      @include respond-to(lg) {
+        margin-bottom: 20px;
+      }
+      @include respond-to(xl) {
+        margin-bottom: 24px;
+      }
+      @include respond-to(2xl) {
+        margin-bottom: 31px;
+      }
+    }
+    &__title {
+      font-size: 28px;
+      font-family: "Pretendard", sans-serif;
+      line-height: 1.21;
+      color: variables.$black-222;
+      font-weight: 600;
+
+      @include respond-to(sm) {
+        font-size: 32px;
+      }
+      @include respond-to(lg) {
+        font-size: 36px;
+      }
+      @include respond-to(xl) {
+        max-width: 349px;
+      }
+      @include respond-to(2xl) {
+        font-size: 40px;
+        max-width: 354px;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    justify-content: center;
+    margin: 24px 0;
+
+    @include respond-to(lg) {
+      margin: 46px 0;
+    }
+
+    @include respond-to(xl) {
+      position: absolute;
+      margin: unset;
+      right: 149px;
+      top: 180px;
+    }
+    @include respond-to(2xl) {
+      top: 212px;
+    }
+    @include respond-to(3xl) {
+      right: 229px;
+      top: 230px;
+    }
+
+    &__text {
+      font-family: "Pretendard", sans-serif;
+      color: variables.$black-222;
+      font-size: 16px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 18px;
+    }
+    @include respond-to(lg) {
+      font-size: 20px;
+    }
+    @include respond-to(xl) {
+      font-size: 24px;
+    }
+  }
+
+  &__group-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+
+    &__btn-next,
+    &__btn-prev {
+      height: 50px;
+      width: 50px;
+      background-color: variables.$gray-e7e;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__icon {
+        width: 20px;
+        height: 20px;
+        padding: 4px 0 5px;
+        object-fit: contain;
+      }
+    }
+
+    &__btn-prev {
+      &__icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    &__btn-next {
+      background-color: variables.$yellow-fed;
+    }
+  }
+
+  &__effect-slides {
+    margin-right: -16px;
+
+    @include respond-to(sm) {
+      margin-right: -20px;
+    }
+    @include respond-to(lg) {
+      margin-right: -24px;
+    }
+    @include respond-to(xl) {
+      margin-left: 101px;
+      margin-top: 34px;
+      margin-right: -48px;
+    }
+    @include respond-to(2xl) {
+      margin-top: 48px;
+      margin-right: -64px;
+    }
+    @include respond-to(3xl) {
+      margin-top: 68px;
+      margin-left: 148px;
+      margin-right: -80px;
+    }
+  }
+}

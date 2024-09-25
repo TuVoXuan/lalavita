@@ -1,0 +1,133 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.wrapper {
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(lg) {
+    height: 400px;
+  }
+  @include respond-to(xl) {
+    height: 420px;
+  }
+  @include respond-to(2xl) {
+    height: 500px;
+  }
+  @include respond-to(3xl) {
+    height: 560px;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    height: 140px;
+    width: 140px;
+    margin-bottom: 15px;
+
+    @include respond-to(lg) {
+      height: 160px;
+      width: 160px;
+      margin-bottom: 18px;
+    }
+    @include respond-to(xl) {
+      height: 180px;
+      width: 180px;
+      margin-bottom: 22px;
+    }
+    @include respond-to(2xl) {
+      height: 240px;
+      width: 240px;
+      margin-bottom: 28px;
+    }
+    @include respond-to(3xl) {
+      height: 280px;
+      width: 280px;
+      margin-bottom: 33px;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text-wrap {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+
+    @include respond-to(lg) {
+      margin-left: 36px;
+    }
+    @include respond-to(xl) {
+      margin-left: 40px;
+    }
+    @include respond-to(2xl) {
+      margin-left: 46px;
+    }
+    @include respond-to(3xl) {
+      margin-left: 54px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-family: "Pretendard", sans-serif;
+    font-weight: 600;
+    line-height: 1.25;
+    color: variables.$black-222;
+    margin-bottom: 10px;
+
+    @include respond-to(lg) {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    @include respond-to(2xl) {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    @include respond-to(3xl) {
+      font-size: 24px;
+      margin-bottom: 21px;
+    }
+  }
+  &__desc {
+    font-size: 14px;
+    font-family: "Pretendard", sans-serif;
+    line-height: 1.5;
+    color: variables.$gray-999;
+
+    @include respond-to(lg) {
+      font-size: 16px;
+    }
+  }
+  &__hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 8px;
+
+    &__item {
+      color: variables.$gray-999;
+      background-color: variables.$gray-f5f;
+      padding: 14px 20px;
+      font-size: 14px;
+      border-radius: 20px;
+      font-family: "Pretendard", sans-serif;
+      font-weight: 600;
+
+      &.blue {
+        background-color: rgba(variables.$blue-42c, 0.15);
+        color: variables.$blue-42c;
+      }
+      &.yellow {
+        background-color: rgba(variables.$yellow-fed, 0.15);
+        color: variables.$yellow-fed;
+      }
+    }
+  }
+}
