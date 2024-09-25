@@ -9,6 +9,7 @@ import QuoteWithAnalysis from "./views/QuoteWithAnalysis/QuoteWithAnalysis";
 import Material from "./views/Material/Material";
 import Advantages from "./views/Advantages/Advantages";
 import EfficacyEffects from "./views/EfficacyEffects/EfficacyEffects";
+import Store from "./views/Store/Store";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
         <SwiperSlide><Material/></SwiperSlide>
         <SwiperSlide><Advantages/></SwiperSlide>
         <SwiperSlide><EfficacyEffects/></SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide><Store/></SwiperSlide>
         <SwiperSlide>Slide 7</SwiperSlide>
         <SwiperSlide>Slide 8</SwiperSlide>
         <SwiperSlide>Slide 9</SwiperSlide>

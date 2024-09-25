@@ -1,0 +1,89 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.prod-card {
+  &__thumbnail {
+    background-color: variables.$gray-f8f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respond-to(lg) {
+      padding: 16px 0;
+    }
+    @include respond-to(xl) {
+      padding: 24px 0;
+    }
+    @include respond-to(2xl) {
+      padding: 33px 0;
+    }
+    img {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+    }
+  }
+  &__info {
+    background-color: variables.$white-fff;
+    padding: 16px 33px;
+    border-bottom: 2px solid variables.$gray-eee;
+    text-align: center;
+
+    @include respond-to(lg) {
+      padding: 24px 42px;
+    }
+    @include respond-to(xl) {
+      padding: 28px 48px;
+    }
+    @include respond-to(2xl) {
+      padding: 32px 67px;
+    }
+
+    &__name {
+      color: variables.$black-222;
+      font-size: 18px;
+      font-family: "Pretendard", sans-serif;
+      margin-bottom: 15px;
+      font-weight: 600;
+      @include respond-to(lg) {
+        font-size: 20px;
+      }
+      @include respond-to(lg) {
+        font-size: 24px;
+      }
+    }
+    &__desc {
+      color: variables.$gray-999;
+      font-size: 14px;
+      line-height: 1.5;
+      @include respond-to(lg) {
+        font-size: 16px;
+      }
+    }
+  }
+  &__prices {
+    display: flex;
+    column-gap: 8px;
+    justify-content: center;
+    align-items: end;
+    padding-top: 8.5px;
+    padding-bottom: 11px;
+    font-family: "Pretendard", sans-serif;
+    background-color: variables.$white-fff;
+
+    @include respond-to(lg) {
+      padding-top: 17px;
+      padding-bottom: 22px;
+    }
+
+    &__actual-price {
+      color: variables.$gray-999;
+      text-decoration-line: line-through;
+      font-size: 14px;
+    }
+    &__discount-price {
+      color: variables.$black-222;
+      font-weight: 600;
+      font-size: 18.5px;
+    }
+  }
+}
