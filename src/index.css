@@ -24,6 +24,14 @@ button {
 ul {
   list-style: none;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
 
 * {
   font-family: "Montserrat", sans-serif;

@@ -10,11 +10,18 @@ import Material from "./views/Material/Material";
 import Advantages from "./views/Advantages/Advantages";
 import EfficacyEffects from "./views/EfficacyEffects/EfficacyEffects";
 import Store from "./views/Store/Store";
+import Contact from "./views/Contact/Contact";
+import { useState } from "react";
 
 function App() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const handleSlideChange = (swiper) => {
+    setActiveSlide(swiper.activeIndex);
+  }
+
   return (
     <div className={styles["wrapper"]}>
-      <Header />
+      <Header textColor={activeSlide === 6 ? 'white' : 'black'}/>
       <Swiper
         direction={"vertical"}
         pagination={{
@@ -22,6 +29,7 @@ function App() {
         }}
         mousewheel={true}
         modules={[Pagination, Mousewheel]}
+        onSlideChange={handleSlideChange}
       >
         <SwiperSlide><Introduction/></SwiperSlide>
         <SwiperSlide><QuoteWithAnalysis/></SwiperSlide>
@@ -29,9 +37,7 @@ function App() {
         <SwiperSlide><Advantages/></SwiperSlide>
         <SwiperSlide><EfficacyEffects/></SwiperSlide>
         <SwiperSlide><Store/></SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide><Contact/></SwiperSlide>
       </Swiper>
     </div>
   );

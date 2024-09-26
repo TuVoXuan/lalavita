@@ -8,6 +8,11 @@
   width: 100%;
   box-sizing: border-box;
   z-index: 2;
+  color: variables.$black-222;
+
+  &.white {
+    color: variables.$white-fff;
+  }
 }
 
 .header {
@@ -39,6 +44,9 @@
   }
 
   &__menu-btn {
+    &.white {
+      color: variables.$white-fff;
+    }
     &__icon {
       width: 30px;
     }
@@ -75,7 +83,6 @@
   }
 
   &__item {
-    color: variables.$black-222;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
